@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Stylebase.css">
+    <title>Task3</title>
+</head>
+
+<body>
+    <div>
+        <h1> Email and Date </h1>
+        <form autocomplete="on">
+            <label>Email Address:</label> <input type="email" id="userEmail" placeholder="JohnDoe@gmail.com" required
+                title="Please Enter Your Email"> <br>
+            <label>Pick Up Date:</label> <input type="date" id="dateInput" required title="Please Enter a Date"> <br>
+            <label>Please Enter Text in the Box: </label><textarea id="textBox" placeholder="Describe Yourself here...." maxlength="300"
+                    title="Please Type Here"></textarea>
+                <br>
+                <button type="button" class="submitButton" onclick="checkInputs()">Touch ME!</button>
+        </form>
+    </div>
+</body>
+<script src="App.js"></script>
+
+</html>

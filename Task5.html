@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="task5.css">
+  <title>Math Game</title>
+</head>
+
+<body onload="createEquation();">
+  <header class="header-banner-top">
+
+    <div class="main-navigation">
+      <input type="checkbox" name="mobile-menu-toggle" id="mobile-menu-toggle" class="mobile-menu-box" />
+      <nav class="horizontal-nav primary-wrapper" role='navigation'>
+        <ul>
+          <li class="active-link"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li class="folder">
+            <input type="checkbox" name="folder-toggle-1" id="folder-toggle-1" class="folder-toggle-box hidden" />
+            <label for="folder-toggle-1" class="folder-toggle-label"><a>Folder</a></label>
+            <ul>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Linkus</a></li>
+              <li><a href="#">Linkorama</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+      <label for="mobile-menu-toggle" class="mobile-menu-label hidden"></label>
+    </div>
+
+    <div class="banner">
+
+      <div class="banner-image"></div>
+
+      <div class="primary-wrapper">
+
+        <h1 class="site-title"><a href="#">MATH GAME</a></h1>
+        <div class="site-tagline">This page generates a simple math quiz, asking you to add two numbers. You have to
+          crack 100 codes</div>
+        <p>What 3 numbers add to <span id='equationArea'>X and multiply to Y</span>?</p>
+        <input type="number" id='guessA' value="enter your guess"><br>
+        <input type="number" id='guessB' value="enter your guess"><br>
+        <input type="number" id='guessC' value="enter your guess"><br><br>
+        <input type="button" value="Check Answer" onclick="checkAnswer();"/>
+        <div id="error_message" class = "error"></div>
+        </div>
+
+    </div>
+  </header>
+</body>
+<script src="CodeBreaker.js"></script>
+
+</html>

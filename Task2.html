@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Task 2</title>
+    <link rel="stylesheet" href="Stylebase.css">
+</head>
+
+<body>
+    <div>
+        <h1>Number Inputs</h1>
+        <br>
+        <label>First Name:</label><input id="name_input" type="text" placeholder="Russell" required
+            autocomplete="on"></input>
+        <div id="firstname_error"></div>
+        <!-- age inputs with min and max values assigned withthe default value set to 18 -->
+        <label>Age:<input id="age_input" type="number" min="1" max="130" value="18"></label>
+        <br>
+        <label>Cellphone:</label><input id="cellphoneInput" minlength="10" maxlength="11" pattern="[0-9]+"
+            autocomplete="on" placeholder="0273845678" title="Enter your cellphone number" type="tel" required>
+        <br>
+        <button type="button" id="checkAge" class="submitButton" onClick="checkAge()">Check Age</button>
+        <br>
+        <div id="error_message"></div>
+        <div id="output_cellphone"></div>
+    </div>
+
+    <script src="App.js"></script>
+</body>
+
+</html>

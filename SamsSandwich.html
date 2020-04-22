@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Task5.css">
+    <link rel="stylesheet" href="bs.css">
+    <script src="https://kit.fontawesome.com/7bcaba9c1f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css" />
+    <title>Task 9</title>
+</head>
+
+<body>
+    <div>
+        <header class="header-banner-top">
+
+            <div class="main-navigation">
+                <input type="checkbox" name="mobile-menu-toggle" id="mobile-menu-toggle" class="mobile-menu-box" />
+                <nav class="horizontal-nav primary-wrapper" role='navigation'>
+                    <ul>
+                        <li class="active-link"><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li class="folder">
+                            <input type="checkbox" name="folder-toggle-1" id="folder-toggle-1"
+                                class="folder-toggle-box hidden" />
+                            <label for="folder-toggle-1" class="folder-toggle-label"><a>Folder</a></label>
+                            <ul>
+                                <li><a href="Task1.html">Task 1</a></li>
+                                <li><a href="Task2.html">Task 2</a></li>
+                                <li><a href="Task3.html">Task 3</a></li>
+                                <li><a href="Task5.html">Math Game</a></li>
+                                <li><a href="Task6.html">Checkboxs</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <label for="mobile-menu-toggle" class="mobile-menu-label hidden"></label>
+            </div>
+
+            <div class="banner">
+
+                <div class="banner-image"></div>
+
+                <div class="primary-wrapper">
+
+                    <h1 class="site-title"><a href="#">Form</a></h1>
+                    <div class="site-tagline">Form Demo</div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="container">
+
+        <form class="well form-horizontal" action=" " method="post" id="sandwich_form">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Contact Us Today!</legend>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">First Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fas fa-user"></i></span>
+                            <input name="first_name" placeholder="First Name" class="form-control" type="text" required
+                                pattern="^[a-zA-Z]*$" id="first_name">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Last Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fas fa-user"></i></span>
+                            <input name="last_name" placeholder="Last Name" class="form-control" type="text" required
+                                pattern="^[a-zA-Z]*$" id="last_name">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Phone #</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fas fa-phone"></i></span>
+                            <input name="phone" placeholder="(845)555-1212" required
+                                pattern="(^\([0]\d{1}\))(\d{7}$)|(^\([0][2]\d{1}\))(\d{6,8}$)|([0][8][0][0])([\s])(\d{5,8}$)"
+                                class="form-control" type="text" id="phone_number">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- radio checks -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">What Sandwich Size?</label>
+                    <div class="col-md-4">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="SandwichSize" value="6" id="user_sandwich_size" /> 6 Inch
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="SandwichSize" value="12" id="user_sandwich_size" /> 12 Inch
+                                (Footlong)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Bread</label>
+                    <div class="col-md-4 selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fas fa-list"></i></span>
+                            <select name="state" class="form-control selectpicker" id="user_bread" required>
+                                <option value=" ">Please Select a Bread</option>
+                                <option>White</option>
+                                <option>Wholegrain</option>
+                                <option>Italian</option>
+                                <option>Rye</option>
+                                <option>Wrap</Option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Cheese</label>
+                    <div class="col-md-4 selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fas fa-list"></i></span>
+                            <select name="state" class="form-control selectpicker" id="user_cheese" required>
+                                <option value=" ">Please Select a Cheese</option>
+                                <option>None</option>
+                                <option>Swiss</option>
+                                <option>Cheddar</option>
+                                <option>Feta</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Meat</label>
+                    <div class="col-md-4 selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fas fa-list"></i></span>
+                            <select name="state" class="form-control selectpicker" id="user_meat" required>
+                                <option value=" ">Please Select a Meat</option>
+                                <option>None</option>
+                                <option>Ham</option>
+                                <option>Turkey</option>
+                                <option>Tuna</option>
+                                <option>Salami</option>
+                                <option>Meatball</option>
+                                <option>Chicken</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- radio checks -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Salads</label>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="Salads" value="Lettuce" id="user_salad" /> Lettuce
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="Salads" value="Tomatoes" id="user_salad" /> Tomatoes
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="Salads" value="Carrot" id="user_salad" /> Carrot
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="Salads" value="Onion" id="user_salad" /> Onion
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="Salads" value="Garlic" id="user_salad" /> Garlic
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="Salads" value="Cucumber" id="user_salad" /> Cucumber
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="Salads" value=" Capsicum" id="user_salad" /> Capsicum
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="Salads" value="Jalapenos" id="user_salad" /> Jalapenos
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success message -->
+                <div class="alert alert-success" role="alert" id="success_message">Success <i class="fas fa-check"></i>
+                    Thanks for contacting us, we will get back to you
+                    shortly.</div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-warning" id="submitButton">Send <i
+                                class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+    </div><!-- /.container -->
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+</script>
+<script type="text/javascript"
+    src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBubE8ciz0RJdCWhLQnvdojAGPjqtR7f9g",
+    authDomain: "sams-sandwichshop.firebaseapp.com",
+    databaseURL: "https://sams-sandwichshop.firebaseio.com",
+    projectId: "sams-sandwichshop",
+    storageBucket: "sams-sandwichshop.appspot.com",
+    messagingSenderId: "675117022520",
+    appId: "1:675117022520:web:7929ca6b95d77cb0ad55cd",
+    measurementId: "G-1R0K7BEY0P"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="Sandwich.js"></script>
+
+</html>
