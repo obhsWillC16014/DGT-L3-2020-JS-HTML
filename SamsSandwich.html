@@ -46,8 +46,8 @@
 
                 <div class="primary-wrapper">
 
-                    <h1 class="site-title"><a href="#">Form</a></h1>
-                    <div class="site-tagline">Form Demo</div>
+                    <h1 class="site-title"><a href="#">Sams Sandwich Shop</a></h1>
+                    <div class="site-tagline">The Best Sandwiches</div>
                 </div>
             </div>
         </header>
@@ -55,7 +55,7 @@
 
     <div class="container">
 
-        <form class="well form-horizontal" action=" " method="post" id="sandwich_form">
+        <form class="well form-horizontal" method="post" id="sandwich_form">
             <fieldset>
 
                 <!-- Form Name -->
@@ -95,7 +95,7 @@
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fas fa-phone"></i></span>
                             <input name="phone" placeholder="(845)555-1212" required
-                                pattern="(^\([0]\d{1}\))(\d{7}$)|(^\([0][2]\d{1}\))(\d{6,8}$)|([0][8][0][0])([\s])(\d{5,8}$)"
+                                pattern="^(\((03|04|06|07|09)\)\d{7})|((021|022|025|027|028|029)\d{6,8})|((0508|0800|0900)\d{5,8})$"
                                 class="form-control" type="text" id="phone_number">
                         </div>
                     </div>
@@ -127,12 +127,12 @@
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fas fa-list"></i></span>
                             <select name="state" class="form-control selectpicker" id="user_bread" required>
-                                <option value=" ">Please Select a Bread</option>
-                                <option>White</option>
-                                <option>Wholegrain</option>
-                                <option>Italian</option>
-                                <option>Rye</option>
-                                <option>Wrap</Option>
+                                <option value="">Please Select a Bread</option>
+                                <option value="White">White</option>
+                                <option value="Wholegrain">Wholegrain</option>
+                                <option value="Italian">Italian</option>
+                                <option value="Rye">Rye</option>
+                                <option value="Wrap">Wrap</Option>
                             </select>
                         </div>
                     </div>
@@ -144,11 +144,11 @@
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fas fa-list"></i></span>
                             <select name="state" class="form-control selectpicker" id="user_cheese" required>
-                                <option value=" ">Please Select a Cheese</option>
-                                <option>None</option>
-                                <option>Swiss</option>
-                                <option>Cheddar</option>
-                                <option>Feta</option>
+                                <option value="">Please Select a Cheese</option>
+                                <option value="None">None</option>
+                                <option value="Swiss">Swiss</option>
+                                <option value="Cheddar">Cheddar</option>
+                                <option value="Feta">Feta</option>
                             </select>
                         </div>
                     </div>
@@ -160,14 +160,14 @@
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fas fa-list"></i></span>
                             <select name="state" class="form-control selectpicker" id="user_meat" required>
-                                <option value=" ">Please Select a Meat</option>
-                                <option>None</option>
-                                <option>Ham</option>
-                                <option>Turkey</option>
-                                <option>Tuna</option>
-                                <option>Salami</option>
-                                <option>Meatball</option>
-                                <option>Chicken</option>
+                                <option value="">Please Select a Meat</option>
+                                <option value="None">None</option>
+                                <option value="Ham">Ham</option>
+                                <option value="Turkey">Turkey</option>
+                                <option value="Tuna">Tuna</option>
+                                <option value="Salami">Salami</option>
+                                <option value="Meatball">Meatball</option>
+                                <option value="Chicken">Chicken</option>
                             </select>
                         </div>
                     </div>
@@ -220,16 +220,16 @@
                     </div>
                 </div>
 
-                <!-- Success message -->
+                <!-- Fail message -->
+                <div class="alertfail alert-fail" role="alert" id="error_message">Please Select an option for: </div>
+                                <!-- Success message -->
                 <div class="alert alert-success" role="alert" id="success_message">Success <i class="fas fa-check"></i>
-                    Thanks for contacting us, we will get back to you
-                    shortly.</div>
-
+                    Thank you for your order!! It will be delivered shortly.</div>
                 <!-- Button -->
                 <div class="form-group">
                     <label class="col-md-4 control-label"></label>
                     <div class="col-md-4">
-                        <button type="submit" class="btn btn-warning" id="submitButton">Send <i
+                        <button type="button" class="btn btn-warning" id="submitButton">Send <i
                                 class="fas fa-paper-plane"></i></button>
                     </div>
                 </div>

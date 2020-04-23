@@ -4,6 +4,10 @@ var usersRef = database.ref('Orders');
 document.getElementById("submitButton").onclick = function () {
         let allAreFilled = true;
         var SaladList = [];
+        var errorMessage = document.getElementById("error_message");
+        if(user_bread.value == ""){errorMessage.textContent += "BREAD, "}
+        if (user_meat.value == ""){errorMessage.textContent += "MEAT, "}
+        if (user_cheese.value == ""){errorMessage.textContent += "CHEESE"}
         document.getElementById("sandwich_form").querySelectorAll("[required]").forEach(function (i) {
                 if (!allAreFilled) return;   
                 if (!i.value) allAreFilled = false;
@@ -21,11 +25,10 @@ document.getElementById("submitButton").onclick = function () {
                 if (salads[i].checked)
                 {
                         SaladList.push(salads[i].value + ' ');
-                        alert(SaladList);
                 }
         }
         if (!allAreFilled) {
-                alert('Fill all the fields');
+                document.getElementById("error_message").style.display = "block";
         }
         if (allAreFilled){
                 var firstName = first_name.value;
@@ -48,6 +51,12 @@ document.getElementById("submitButton").onclick = function () {
                         Salad:saladChoice,
                 }
                 usersRef.push(data);
-                location.reload();
+        document.getElementById("error_message").style.display = "none";
+        document.getElementById("success_message").style.display = "block";
+        window.setTimeout(pageReload, 3000);
         }
 };
+
+function pageReload() {
+        location.reload();
+    }

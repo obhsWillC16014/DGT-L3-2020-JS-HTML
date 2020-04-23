@@ -357,3 +357,36 @@ code {
 #success_message{
   display: none;
 }
+
+#error_message{
+  display: none;
+}
+
+.alertfail {
+	box-sizing: border-box;
+	background-color: #d60c3e;
+	width: 100%;
+	position: relative; 
+	top: 0;
+	left: 0;
+	z-index: 300;
+	padding: 20px 40px;
+  color: #333;
+  border-radius: 50px;
+}
+
+.alertfail h2 {
+	font-size: 22px;
+	color: #232323;
+	margin-top: 0;
+}
+
+.alertfail p {
+	line-height: 1.6em;
+	font-size:18px;
+}
+
+.alertfail a {
+	color: #232323;
+	font-weight: bold;
+}
